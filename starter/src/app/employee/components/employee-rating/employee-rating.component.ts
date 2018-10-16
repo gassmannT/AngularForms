@@ -3,7 +3,11 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-employee-rating',
-  template: `...`,
+  template: `
+    <button [disabled]="disabled" (click)="decrement()">-</button>
+    {{counterValue}}
+    <button [disabled]="disabled" (click)="increment()">+</button>
+  `,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
