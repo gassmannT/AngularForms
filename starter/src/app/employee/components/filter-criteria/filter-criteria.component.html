@@ -1,0 +1,12 @@
+<div class="row mb-2">
+    <div class="col-md-2">Search:</div>
+    <div class="col-md-6">
+        <input type="search" [(ngModel)]="listFilter" class="form-control" />
+    </div>
+</div>
+<div class="row" *ngIf="listFilter">
+    <div class="col-md-6">
+        <span>Filtered by: {{listFilter}}</span><br />
+        <span>{{hitCountMessage}}</span>
+    </div>
+</div>
