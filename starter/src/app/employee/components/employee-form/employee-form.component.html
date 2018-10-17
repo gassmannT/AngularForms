@@ -37,6 +37,9 @@
             <span *ngIf="email?.hasError('invalidemail')">
                 E-Mail is invalid.
             </span>
+            <span *ngIf="email.hasError('emailNotUnique')">
+                E-Mail is not unique.
+            </span>
         </div>
     </div>
     <div class="form-group row">
